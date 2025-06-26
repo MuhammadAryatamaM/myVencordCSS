@@ -1,0 +1,460 @@
+# Just paste to quickcss on vencord
+
+/_ Hide clan (guild) tags _/
+[class*="chipletContainerInner_"]:has([src*="/clan-badges/"]) {
+display: none;
+}
+
+/_ fullscreen emojis _/
+.layerContainer_da8173 .positionLayer\_\_08434 {
+width: 100vw;
+height: 100vh !important;
+left: 0px;
+bottom: 0px !important;
+align-items: center !important;
+align-content: center !important;
+background-color: rgba(0, 0, 0, 0.5);
+
+.drawerSizingWrapper\_\_08434 {
+justify-self: center !important;
+align-self: center !important;
+right: 50vw !important;
+left: 50vw !important;
+top: 50vh !important;
+bottom: 50vh !important;
+height: 90vh;
+width: 90vw !important;
+}
+}
+
+/_ PRETTIER SEARCH BAR _/
+[class*="search"]:not([class*="open"]) > [class^="searchBar"] {
+width: 28px;
+background: transparent;
+border-width: 0px;
+}
+
+[class*="searchBarComponent"] {
+background: transparent;
+}
+
+[class*="search"]:not([class*="open"]) [class^="iconLayout"] {
+cursor: pointer;
+}
+
+[class*="search"]:not([class*="open"]) [class^="iconContainer"] {
+transform: scale(1.4);
+}
+
+[class*="search"]:not([class*="open"]) [class^="icon_fea832"] {
+color: var(--interactive-normal);
+}
+
+[class*="search"]:not([class*="open"]):hover [class^="icon"] {
+color: var(--interactive-active);
+}
+
+/_ Changing the server pill sizing, color and behaviour _/
+.wrapper_ef3116 .pill**1f388,
+.wrapper_ef3116 .pill**66ac8 {
+display: none;
+}
+
+.wrapper_ef3116 .pill_e5445c,
+.wrapper_ef3116 .pill\_\_5bc7e {
+/_ left: 0 !important; _/
+/_ top: calc(24px _ var(--guildsize_v)/50) !important; \*/
+height: 100% !important;
+justify-content: center !important;
+align-items: center !important;
+transition: 0.2s;
+}
+
+.item\_\_58105 {
+width: 4px !important;
+min-height: 30% !important;
+border-radius: 0.25rem !important;
+margin: 0 !important;
+background-color: var(--channelColor) !important;
+transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.listItem**650eb:hover .item**58105 {
+height: 50% !important;
+background-color: var(--channelColorSec) !important;
+transition: 0.3s;
+}
+
+/_ remove video Call Button _/
+[class*="toolbar"] [role="button"]:has([d*="M4 4a3 3 0 0"]) {
+display: none;
+}
+
+[class*="notice__"] {
+background-color: var(--background-primary);
+}
+
+[class*="iconGroup"]: has(
+
+    [class*="hangStatusIcon"],
+    [d*="M13 3a1"],
+    [class*="gameIcon"]
+
+) {
+display: flex;
+position: absolute;
+right: 100%;
+}
+[class*="layerContainer"]
+[class*="popout"]:has([class*="text-xs-medium"], [class*="options"]) {
+display: block;
+}
+
+[id*="user-context-call"] {
+display: none;
+}
+[class*="sticker"] {
+border-radius: 10px;
+}
+
+/_ Fixes soundmoji picker which has a hardcoded height _/
+[class*="expressionPickerPositionLayer_"]
+[class*="soundboardContainer_"]
+[class*="picker_"] {
+height: 100%;
+}
+
+/_ FIX MARGINS ON GIFS _/
+div[class*="imageContent"] span[class*="altText"] {
+margin: 0.25rem 0 -0.15rem;
+line-height: 17px;
+}
+
+/_ remove inbox button _/
+[class*="recentsIcon"] [class*="iconWrapper"]:not(selected) {
+display: none;
+}
+
+/_ Make banner color fade _/
+.mask\_\_68edb {
+mask: linear-gradient(black, transparent);
+}
+
+/_ == GROUPS == _/
+.membersGroup_c8ffbb {
+font-size: 85%;
+margin: flex;
+
+/_ Set initial border color and width _/
+border-bottom-width: 2px;
+border-style: solid;
+border-color: transparent;
+margin-left: 15px;
+margin-right: 10px;
+margin-bottom: 5px;
+
+/_ Gradient border _/
+border-image: linear-gradient(to left, #6b6eff, #1909ff);
+border-image-slice: 1;
+}
+
+.membersGroup_c8ffbb:before {
+height: 0px;
+flex-grow: 1;
+content: "";
+margin-right: 0px;
+}
+
+.membersGroup_c8ffbb:after {
+content: "";
+height: 0px;
+flex-grow: 1;
+margin-left: 0px;
+}
+
+/_ Circle server icon and folder _/
+.folderIcon\_\_48112 > .wrapper_cc5dd2 > .svg_cc5dd2 > foreignObject {
+border-radius: 0% !important;
+}
+
+.icon\_\_6e9f8 {
+border-radius: 50%;
+}
+
+.visual-refresh .guildIcon\_\_48112 {
+border-radius: 50% !important;
+}
+
+/_ Hide nitro gift, sticker picker, GIF picker, app launcher _/
+button[aria-label="Send a gift"] {
+display: none;
+}
+button[aria-label="Open sticker picker"] {
+display: none;
+}
+button[aria-label="Open GIF picker"] {
+display: none;
+}
+[class*=channelAppLauncher_] {
+display: none !important;
+}
+
+/_ Username in voice chat _/
+.usernameFont\_\_07f91 {
+font-weight: 700;
+text-shadow: #000000 0px 0px 3px;
+padding-left: 5px;
+}
+
+/_ Voice chat user glow effect for both username and profile picture _/
+.avatarSpeaking\_\_07f91 {
+background-color: #5dd8fdbe;
+box-shadow: 0 0 10px #5dd8fdbe, 0 0 20px #5dd8fdbe;
+border-radius: 100%;
+transition: box-shadow 0.05s ease, background-color 0.05s ease;
+}
+
+/_ 'Find or blah blah' customization _/
+.searchBar**35e86 .button**201d5 {
+background: rgba(30, 30, 30, 0.8);
+border-radius: 10px;
+border: 2px solid rgb(12, 192, 236);
+box-shadow: 0 0 2px #0bd3ee, 0 0 4px #11d4f7;
+}
+
+/_ Poll transparency _/
+.visual-refresh .container\_\_0be77 {
+background-color: rgba(0, 0, 0, 0.4);
+}
+
+/_ Remove all except friends _/
+:where(.visual-refresh)
+.channel**972a0:not(.dm**972a0)
+.link\_\_972a0:not([href="/channels/@me"]) {
+display: none;
+}
+
+/_ Remove the dividers _/
+.visual-refresh .sectionDivider\_\_35e86 {
+display: none;
+}
+
+/_ Remove play again _/
+.itemContainer**675e5,
+.headerContainer**675e5 {
+display: none;
+}
+
+/_ Make settings a window _/
+.standardSidebarView\_\_23e6b {
+position: absolute;
+width: 60vw;
+max-width: 60vw !important;
+height: 75vh;
+z-index: 4000;
+justify-self: center;
+align-self: center;
+display: flex;
+border-radius: 10px;
+overflow: hidden;
+border: rgba(255, 255, 255, 0.1) 1px solid;
+
+.contentRegion\_\_23e6b {
+width: calc(60vw - 270px);
+display: block;
+flex: none;
+
+    .toolsContainer__23e6b {
+      margin: 0;
+      position: absolute;
+      right: 0px;
+      top: 0;
+      flex: none;
+      background-color: var(--background-primary);
+      padding: 0px;
+      height: 46px;
+      width: 100%;
+      box-shadow: var(--elevation-low);
+
+      .tools__23e6b {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 5000;
+
+        .container_c2b141 {
+          .keybind_c2b141 {
+            display: none;
+          }
+
+          .closeButton_c2b141 {
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            height: 25px !important;
+            width: 25px !important;
+            border: none;
+            flex: none;
+
+            > svg {
+              margin: 9px 0px 0px 9px;
+              width: 18px !important;
+              height: 18px !important;
+              overflow: visible;
+
+              > path {
+                margin-left: 20px;
+                d: path(
+                  "M0.00380648 0.00268555H1.50315H1.55C1.93069 0.0202563 2.31724 0.19596 2.5808 0.47123L6.00117 3.8916L9.4684 0.47123C9.86666 0.125678 10.1361 0.0143984 10.4992 0.00268555H11.9985V1.50203C11.9985 1.92957 11.9458 2.32784 11.6237 2.62653L8.20333 6.0469L11.5768 9.42042C11.858 9.70155 11.9985 10.0998 11.9985 10.4981V11.9974H10.4992C10.1009 11.9974 9.70267 11.8569 9.42154 11.5757L6.00117 8.15535L2.5808 11.5757C2.29967 11.8569 1.90141 11.9974 1.50315 11.9974H0.00380648V10.4981C0.00380648 10.0998 0.14437 9.70155 0.425496 9.42042L3.84587 6.0469L0.425496 2.62653C0.109228 2.33369 -0.0313351 1.92372 0.00380648 1.50203V0.00268555Z"
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .contentColumn__23e6b:not([id*="vencord"], [id*="vesktop"]) {
+      /* vencord tabs excluded because they are literally the only ones that break lmfao */
+      min-width: 0px !important;
+      width: 100%;
+      padding: 0px 20px;
+
+      > .settingsPage_f131e9 {
+        > div {
+          padding-top: 66px;
+        }
+
+        > h3 {
+          font-size: 16px;
+          z-index: 5000;
+          height: 46px;
+          align-content: center;
+          text-align: center;
+          width: calc(60vw - 270px - 50px);
+          position: fixed;
+        }
+      }
+
+      > div > h2[data-text-variant="heading-lg/semibold"],
+      > div > .sectionTitle__7bffb > h2,
+      > h2[data-text-variant="heading-lg/semibold"] {
+        font-size: 16px;
+        z-index: 100;
+        height: 46px;
+        align-content: center;
+        text-align: center;
+        width: calc(60vw - 270px - 50px);
+        position: fixed;
+        pointer-events: none;
+      }
+
+      > div > .children__7bffb,
+      .tabBar_d6f9e9,
+      .vc-settings-tab-bar,
+      .vc-special-card,
+      > div > .h5_b717a1 {
+        margin-top: 66px;
+      }
+
+      .headerContainer__6a750 {
+        justify-content: center;
+      }
+    }
+
+}
+
+.sidebarRegion\_\_23e6b {
+flex: none;
+
+    .sidebar__23e6b {
+      width: 270px;
+      padding: 0;
+      overflow: visible !important;
+
+      &::before {
+        content: "Settings";
+        font-size: 16px;
+        font-weight: 600;
+        z-index: 100;
+        height: 46px;
+        align-content: center;
+        text-align: center;
+        width: 278px;
+        position: fixed;
+        pointer-events: none;
+        background-color: var(--background-secondary);
+        box-shadow: var(--elevation-low);
+        color: white;
+      }
+
+      .side_b3f026 {
+        overflow: visible !important;
+        padding: 60px 8px 60px 16px;
+      }
+    }
+
+}
+}
+
+.layer\_\_960e4 {
+background-color: rgba(0, 0, 0, 0.77) !important;
+}
+
+.baseLayer\_\_960e4 {
+opacity: 1 !important;
+transform: scale(1) !important;
+}
+
+/_ REMOVE QUICK REACT BAR _/
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(1),
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(2),
+.button_f7ecac.hoverBarButton_f84418:nth-of-type(3),
+.separator_f84418 {
+display: none;
+}
+
+/_ reduce context menu padding _/
+.layer_da8173 > .menu_c1e9c4 {
+min-width: 0;
+width: 171px !important;
+.scroller_c1e9c4 {
+/_ border margin _/
+margin: -4px;
+}
+.separator_c1e9c4 {
+/_ separator margin _/
+margin: 1px 8px !important;
+}
+.wrapper_f563df {
+/_ reactions margin _/
+padding: 0px !important;
+margin: 1px;
+}
+.item_c1e9c4 {
+/_ min-height is 32px as default, change value for desired look _/
+min-height: 0;
+/_ padding is 4px 8px as default, change value for desired look _/
+padding: 4px 8px;
+}
+.icon_f563df {
+/_ reactions size _/
+width: 18px;
+}
+.button_f563df {
+/_ reactions border size _/
+width: 36px;
+height: 36px;
+border-radius: 4px;
+}
+.icon_c1e9c4 {
+/_ icons size _/
+width: 18px;
+height: 18px;
+}
+.iconContainer_c1e9c4 {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+}
