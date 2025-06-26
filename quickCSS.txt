@@ -1,4 +1,4 @@
-# Just paste to quickcss on vencord
+# Just paste below to quickcss on vencord
 
 /_ Hide clan (guild) tags _/
 [class*="chipletContainerInner_"]:has([src*="/clan-badges/"]) {
