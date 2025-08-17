@@ -1,6 +1,23 @@
+@import url("https://raw.githubusercontent.com/acheronx0577/Better-Compact-Command-Menu-With-Smooth-Transition/refs/heads/main/Better%20Compact%20Command%20Menu%20With%20Smooth%20Transition.css");
+@import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/OtherStuff/hideGlobalDiscovery.css");
+
 /* Hide clan (guild) tags */
 [class*="chipletContainerInner_"]:has([src*="/clan-badges/"]) {
   display: none;
+}
+/* Hide Nitro Gift button */
+div[aria-label="Send a gift"] {
+    display: none;
+}
+
+/* Hide GIF picker button */
+div[aria-label="Open GIF picker"] {
+    display: none !important;
+}
+
+/* Hide sticker picker button */
+div[aria-label="Open sticker picker"] {
+    display: none;
 }
 
 /* fullscreen emojis */
@@ -451,4 +468,66 @@ button[aria-label="Open GIF picker"] {
         justify-content: center;
         align-items: center;
     }
+}
+
+nav[class*="guilds"]::-webkit-scrollbar {
+  display: none !important;
+}
+
+nav[class*="guilds"] {
+  --paddingY: 15px;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  max-height: 85vh;
+  overflow-y: auto;
+  transform: translate(-80%, -50%) !important;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  border: 2.2px solid #242424;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px 5px;
+  height: 50vh;
+}
+
+nav[class*="guilds"] div {
+  transform: scale(0);
+}
+
+nav[class*="guilds"]:hover {
+  transform: translate(0%, -50%) !important;
+  height: auto;
+}
+
+nav[class*="guilds"]:hover div {
+  transform: scale(100%);
+}
+
+.embedFull__623de {
+    overflow: hidden;
+
+    &::before {
+        top: -1px;
+        content: "";
+        position: absolute;
+        border: inherit;
+        border-left-width: 100vw;
+        max-width: 100%;
+        height: calc(100% + 2px);
+        box-sizing: border-box !important;
+        opacity: 0.25;
+        z-index: 1;
+        border-radius: 0px 8px 8px 0px;
+    }
+
+    .gridContainer__623de {
+        z-index: 2;
+    }
+}
+.withAccentColor__60fa3 {
+    background: color-mix(in srgb, var(--background-surface-high), var(--__accent-color) 25%);
+}
+
+/*Removes Use Apps */
+div#channel-attach-SLASH_COMMAND {
+  display: none;
 }
